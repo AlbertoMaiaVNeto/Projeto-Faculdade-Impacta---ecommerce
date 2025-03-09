@@ -1,0 +1,114 @@
+/* style2.css */
+
+:root {
+    --cor0: #ffffff;
+    --cor1: #f7f7f7;
+    --cor2: #ededed;
+    --cor3: #dedede;
+    --cor4: #cccccc;
+    --cor5: #b2b2b2;
+    --cor6: #9c9c9c;
+    --cor7: #717171;
+    --cor8: #595959;
+    --cor9: #404040;
+    --cor10: #2e2e2e;
+    --cor11: #111111;
+    --cor12: #000000;
+    --corp1: #ffbb00;
+    --corp2: #e4a30b;
+    --corp3: #a66f00;
+    --corp4: #664400;
+    --corp5: #332200;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor11);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--cor1);
+  }
+  
+  h1 {
+    font: 600 2rem/1.25 "Poppins", sans-serif;
+    margin-bottom: 2rem;
+    color: var(--corp1);
+  }
+  
+  form {
+    width: 300px;
+    background-color: var(--cor0);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  form p {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font: 400 1rem/1.5 "Poppins", sans-serif;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid var(--cor3);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 400 1rem/1.5 "Roboto", sans-serif;
+    background-color: var(--cor1);
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    border-color: var(--corp1);
+    box-shadow: 0 0 0 2px #fea;
+    background-color: var(--cor0);
+  }
+  
+  button[type="submit"] {
+    background: linear-gradient(#ffbf00, #f2a50c);
+    border: none;
+    color: var(--corp5);
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font: 600 1.125rem/1.35 "Poppins", sans-serif;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+  }
+  
+  button[type="submit"]:hover {
+    background: linear-gradient(#ffb60d, #e59317);
+  }
+  
+  p a {
+    color: var(--corp1);
+    text-decoration: none;
+    font: 500 1rem/1.5 "Poppins", sans-serif;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+    color: var(--corp2);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 480px) {
+    form {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  }
+
