@@ -28,6 +28,8 @@
           <li><a href="./bicicletas.html">Bicicletas</a></li>
           <li><a href="./seguros.html">Seguros</a></li>
           <li><a href="./contato.html">Contato</a></li>
+          <li><a href="./carrinho.php">Carrinho</a></li> <!-- Nova aba -->
+          
         </ul>
       </nav>
     </div>
@@ -53,43 +55,73 @@
 
         <div class="orcamento-conteudo" id="orcamento-bikcraft">
           <h2 class="font-1-xs cor5">Escolha a sua</h2>
-
-          <input type="radio" name="produto" value="nimbus" id="nimbus">
-          <label for="nimbus">Nimbus Stark <span>R$ 4.999</span></label>
-          <div class="orcamento-detalhes">
-            <ul class="font-1-xs cor8">
-              <li><img src="./img/icones/eletrica.svg" alt="">Motor Elétrico</li>
-              <li><img src="./img/icones/carbono.svg" alt="">Fibra de Carbono</li>
-              <li><img src="./img/icones/velocidade.svg" alt="">50 km/h</li>
-              <li><img src="./img/icones/rastreador.svg" alt="">Rastreador</li>
-            </ul>
-            <img src="./img/bicicletas/nimbus.jpg" alt="">
+        
+          <div class="produto-item" data-produto="nimbus">
+            <input type="checkbox" name="produto[]" value="nimbus" id="nimbus">
+            <label for="nimbus">Nimbus Stark <span>R$ 4.999</span></label>
+          
+            <div class="contador">
+              <button type="button" class="menos" data-target="nimbus">-</button>
+              <input type="number" name="quantidade[nimbus]" id="quantidade-nimbus" value="1" min="1">
+              <button type="button" class="mais" data-target="nimbus">+</button>
+            </div>
+          
+            <div class="orcamento-detalhes imagem-produto" id="imagem-nimbus" style="display: none;">
+              <ul class="font-1-xs cor8">
+                <li><img src="./img/icones/eletrica.svg" alt="">Motor Elétrico</li>
+                <li><img src="./img/icones/carbono.svg" alt="">Fibra de Carbono</li>
+                <li><img src="./img/icones/velocidade.svg" alt="">50 km/h</li>
+                <li><img src="./img/icones/rastreador.svg" alt="">Rastreador</li>
+              </ul>
+              <img src="./img/bicicletas/nimbus.jpg" alt="">
+            </div>
           </div>
-
-          <input type="radio" name="produto" value="magic" id="magic">
-          <label for="magic">Magic Might <span>R$ 2.499</span></label>
-          <div class="orcamento-detalhes">
-            <ul class="font-1-xs cor8">
-              <li><img src="./img/icones/eletrica.svg" alt="">Motor Elétrico</li>
-              <li><img src="./img/icones/carbono.svg" alt="">Fibra de Carbono</li>
-              <li><img src="./img/icones/velocidade.svg" alt="">50 km/h</li>
-              <li><img src="./img/icones/rastreador.svg" alt="">Rastreador</li>
-            </ul>
-            <img src="./img/bicicletas/magic.jpg" alt="">
+          
+        
+          <div class="produto-item" data-produto="magic">
+            <input type="checkbox" name="produto[]" value="magic" id="magic">
+            <label for="magic">Magic Might <span>R$ 2.499</span></label>
+          
+            <div class="contador">
+              <button type="button" class="menos" data-target="magic">-</button>
+              <input type="number" name="quantidade[magic]" id="quantidade-magic" value="1" min="1">
+              <button type="button" class="mais" data-target="magic">+</button>
+            </div>
+          
+            <div class="orcamento-detalhes imagem-produto" id="imagem-magic" style="display: none;">
+              <ul class="font-1-xs cor8">
+                <li><img src="./img/icones/eletrica.svg" alt="">Motor Elétrico</li>
+                <li><img src="./img/icones/carbono.svg" alt="">Fibra de Carbono</li>
+                <li><img src="./img/icones/velocidade.svg" alt="">50 km/h</li>
+                <li><img src="./img/icones/rastreador.svg" alt="">Rastreador</li>
+              </ul>
+              <img src="./img/bicicletas/magic.jpg" alt="">
+            </div>
           </div>
-
-          <input type="radio" name="produto" value="nebula" id="nebula">
-          <label for="nebula">Nebula Cosmic <span>R$ 3.999</span></label>
-          <div class="orcamento-detalhes">
-            <ul class="font-1-xs cor8">
-              <li><img src="./img/icones/eletrica.svg" alt="">Motor Elétrico</li>
-              <li><img src="./img/icones/carbono.svg" alt="">Fibra de Carbono</li>
-              <li><img src="./img/icones/velocidade.svg" alt="">50 km/h</li>
-              <li><img src="./img/icones/rastreador.svg" alt="">Rastreador</li>
-            </ul>
-            <img src="./img/bicicletas/nebula.jpg" alt="">
+        
+          <div class="produto-item" data-produto="nebula">
+            <input type="checkbox" name="produto[]" value="nebula" id="nebula">
+            <label for="nebula">Nebula Cosmic <span>R$ 3.999</span></label>
+          
+            <div class="contador">
+              <button type="button" class="menos" data-target="nebula">-</button>
+              <input type="number" name="quantidade[nebula]" id="quantidade-nebula" value="1" min="1">
+              <button type="button" class="mais" data-target="nebula">+</button>
+            </div>
+          
+            <div class="orcamento-detalhes imagem-produto" id="imagem-nebula" style="display: none;">
+              <ul class="font-1-xs cor8">
+                <li><img src="./img/icones/eletrica.svg" alt="">Motor Elétrico</li>
+                <li><img src="./img/icones/carbono.svg" alt="">Fibra de Carbono</li>
+                <li><img src="./img/icones/velocidade.svg" alt="">50 km/h</li>
+                <li><img src="./img/icones/rastreador.svg" alt="">Rastreador</li>
+              </ul>
+              <img src="./img/bicicletas/nebula.jpg" alt="">
+            </div>
           </div>
         </div>
+        <p class="font-1-m cor5" id="total-itens">Total de itens selecionados: 0</p>
+
 
         <div class="orcamento-conteudo" id="orcamento-seguro">
           <h2 class="font-1-xs cor5">Escolha o plano</h2>
@@ -196,7 +228,7 @@
           </label>
         </div>
 
-        <button class="botao col-2">Solicitar orçamento</button>
+        <button type="submit" formaction="carrinho.php" class="botao col-2">Comprar</button>
       </div>
     </form>
   </main>
@@ -239,5 +271,53 @@
     </div>
   </footer>
 </body>
+<script>
+  function atualizarTotalItens() {
+    const checkboxes = document.querySelectorAll('.produto-item input[type="checkbox"]:checked');
+    let total = 0;
+
+    checkboxes.forEach(checkbox => {
+      const id = checkbox.id;
+      const quantidade = document.getElementById(`quantidade-${id}`);
+      total += parseInt(quantidade.value);
+    });
+
+    document.getElementById('total-itens').innerText = `Total de itens selecionados: ${total}`;
+  }
+
+  document.querySelectorAll('.produto-item input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const id = checkbox.id;
+      const imagem = document.getElementById(`imagem-${id}`);
+      if (checkbox.checked) {
+        imagem.style.display = 'block';
+      } else {
+        imagem.style.display = 'none';
+      }
+      atualizarTotalItens();
+    });
+  });
+
+  document.querySelectorAll('.mais').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+      const input = document.getElementById(`quantidade-${target}`);
+      input.value = parseInt(input.value) + 1;
+      if (document.getElementById(target).checked) atualizarTotalItens();
+    });
+  });
+
+  document.querySelectorAll('.menos').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+      const input = document.getElementById(`quantidade-${target}`);
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+        if (document.getElementById(target).checked) atualizarTotalItens();
+      }
+    });
+  });
+</script>
+
 
 </html>
