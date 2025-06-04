@@ -8,7 +8,7 @@ CREATE TABLE `usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(140) NOT NULL,
   `email` VARCHAR(160) NOT NULL UNIQUE,
-  `senha` VARCHAR(255) NOT NULL, -- aumenta para hash futuro
+  `senha` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -59,3 +59,21 @@ END;
 //
 
 DELIMITER ;
+
+-- ========================
+-- Tabela Wishlist do usuário
+-- ========================
+
+DROP TABLE IF EXISTS `wishlist`;
+CREATE TABLE `wishlist` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `usuario_id` INT NOT NULL,
+  `produto_id` INT NOT NULL,
+  `data_adicionado` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`produto_id`) REFERENCES `produtos` (`id`) ON DELETE CASCADE,
+  UNIQUE KEY `usuario_produto_unico` (`usuario_id`, `produto_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Exemplo de inserção na wishlist:
+-- INSERT INTO `wishlist` (`usuario_id`, `produto_id`) VALUES (1, 3);
